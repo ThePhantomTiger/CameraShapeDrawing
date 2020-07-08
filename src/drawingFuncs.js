@@ -18,16 +18,20 @@ setup();
 //Setup For The Main Method.
 function setup()
 {
-    canvas = document.createElement('canvas');
-    canvas.id = 'myCanvas';
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight; 
-    document.body.appendChild(canvas);
-    
+    createCanvas(window.innerWidth, window.innerHeight);
     
     main();
 }
 
+function createCanvas(width, height)
+{
+    canvas = document.createElement('canvas');
+    canvas.id = 'myCanvas';
+    canvas.width = width;
+    canvas.height = height; 
+    document.body.appendChild(canvas);
+
+}
 
 
 function main()

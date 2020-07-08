@@ -230,8 +230,8 @@ class Camera {
         this._controlStates["Down"] = false;
         this._controlStates["Left"] = false;
         //Remove Event Listeners.
-        window.removeEventListener('keydown', function(e){this.keyDown(e)});
-        window.removeEventListener('keyup', function(e){this.keyUp(e)});
+        window.removeEventListener('keydown', event => this._keyDown(event));
+        window.removeEventListener('keyup', event => this._keyUp(event));
         
     }
 
